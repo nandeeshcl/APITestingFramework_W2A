@@ -7,7 +7,7 @@ public class TestConfig{
 	public static String from = "nandeeshclakhi@gmail.com";
 	public static String password = "9945264220";
 	public static String[] to ={"nandeeshclakhi@gmail.com"};
-	public static String subject = "Extent Project Report";
+	public static String subject = "API Testing Framework Report";
 	
 	public static String messageBody ="TestMessage";
 	/*public static String attachmentPath="c:\\screenshot\\2017_10_3_14_49_9.jpg";

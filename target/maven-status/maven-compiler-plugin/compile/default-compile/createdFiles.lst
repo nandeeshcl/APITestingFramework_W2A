@@ -5,4 +5,5 @@ com\practise\RestAssuredAPITestingFramework\setup\BaseClass.class
 com\practise\APITestingFramework\APIs\CreateCustomerAPI.class
 com\practise\APITestingFramework\utils\DataUtil.class
 com\practise\APITestingFramework\utils\ValidationUtils.class
+com\practise\APITestingFramework\utils\MonitoringMail$1.class
 com\practise\APITestingFramework\utils\ExcelReader.class

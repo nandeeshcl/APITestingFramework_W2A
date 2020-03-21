@@ -108,13 +108,10 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	public void onFinish(ISuite suite) {
 
-		
-		try {
-			 messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/APITestingFramework/Extent_20Reports/"+fileName;
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		http://localhost:8080/job/APITestingFramework/Extent_20Report/
+			
+		messageBody = "http://localhost:8080/job/APITestingFramework/Extent_20Report/Extent_Report.html";
+		// messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/APITestingFramework/Extent_20Reports/"+fileName;
 		
 		MonitoringMail mail = new MonitoringMail();
 		try {
