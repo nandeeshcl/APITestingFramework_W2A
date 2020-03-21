@@ -5,6 +5,9 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Date;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
 /*import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 */
@@ -22,6 +25,8 @@ import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 /*import com.w2a.APITestingFramework.utilities.MonitoringMail;
 import com.w2a.APITestingFramework.utilities.TestConfig;*/
+import com.practise.APITestingFramework.utils.MonitoringMail;
+import com.practise.APITestingFramework.utils.TestConfig;
 
 public class ExtentListeners implements ITestListener, ISuiteListener {
 
@@ -103,19 +108,24 @@ public class ExtentListeners implements ITestListener, ISuiteListener {
 
 	public void onFinish(ISuite suite) {
 
-		/*
-		 * try { messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+
-		 * ":8080/job/APITestingFramework/Extent_20Reports/"+fileName; } catch
-		 * (UnknownHostException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); }
-		 * 
-		 * MonitoringMail mail = new MonitoringMail(); try {
-		 * mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to,
-		 * TestConfig.subject, messageBody); } catch (AddressException e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); } catch (MessagingException
-		 * e) { // TODO Auto-generated catch block e.printStackTrace(); }
-		 */
-
+		
+		try {
+			 messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/APITestingFramework/Extent_20Reports/"+fileName;
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		MonitoringMail mail = new MonitoringMail();
+		try {
+			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
+		} catch (AddressException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
