@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener
+			class-name="com.practise.APITestingFramework.listeners.ExtentListeners">
+		</listener>
+	</listeners>
+
+	<test name="createCustomerTest">
+		<classes>
+			<class name="com.practise.RestAssuredAPITestingFramework.TestCases.TC_01_Create_Customer" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="deleteCustomerTest">
+		<classes>
+			<class name="com.practise.RestAssuredAPITestingFramework.TestCases.TC_02_Delete_Customer" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
