@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="com.practise.APITestingFramework.listeners.ExtentListeners"/>
-  </listeners>
-  <test name="deleteCustomerTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.practise.RestAssuredAPITestingFramework.TestCases.TC_02_Delete_Customer">
+      <class name="rough.PayPalAPI">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="validateDeleteCustomerWithValidID" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="afterMethod"/>
-          <include name="tearDown"/>
+          <include name="getAccessToken"/>
+          <include name="createOrder"/>
+          <include name="getOrder"/>
         </methods>
-      </class> <!-- com.practise.RestAssuredAPITestingFramework.TestCases.TC_02_Delete_Customer -->
-      <class name="com.practise.RestAssuredAPITestingFramework.TestCases.TC_01_Create_Customer">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.practise.RestAssuredAPITestingFramework.TestCases.TC_01_Create_Customer -->
+      </class> <!-- rough.PayPalAPI -->
     </classes>
-  </test> <!-- deleteCustomerTest(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
